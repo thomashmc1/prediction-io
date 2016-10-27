@@ -11,7 +11,7 @@ sudo apt-get update
 # Runit
 sudo apt-get install -y --no-install-recommends runit
 # export > /etc/envvars && /usr/sbin/runsvdir-start
-# echo 'export > /etc/envvars' >> /home/server1001/.bashrc
+# echo 'export > /etc/envvars' >> ~/.bashrc
 
 # Utilities
 sudo apt-get install -y --no-install-recommends vim less net-tools inetutils-ping wget curl git telnet nmap socat dnsutils netcat tree htop unzip sudo software-properties-common jq psmisc iproute
@@ -30,7 +30,9 @@ wget -O - http://download.prediction.io/PredictionIO-0.9.5.tar.gz | tar zx
 mv ./PredictionIO* ~/PredictionIO
 mkdir ~/PredictionIO/vendors
 export PIO_HOME=~/PredictionIO
+echo 'PIO_HOME=~/PredictionIO' >> ~/.bashrc
 export PATH=$PATH:$PIO_HOME/bin
+echo 'PATH=$PATH:$PIO_HOME/bin' >> ~/.bashrc
 
 #Spark
 wget -O - http://d3kbcqa49mib13.cloudfront.net/spark-1.5.1-bin-hadoop2.6.tgz | tar zx
