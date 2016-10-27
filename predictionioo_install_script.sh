@@ -77,7 +77,7 @@ wget -O - https://raw.githubusercontent.com/mingfang/docker-predictionio/master/
 cp hbase-site.xml ~/PredictionIO/vendors/hbase/conf/
 cp hbase-env.sh ~/PredictionIO/vendors/hbase/conf/
 
-./PredictionIO/bin/pio-start-all
+~/PredictionIO/bin/pio-start-all
 pio status
 
 #Get Recommendation Engine
