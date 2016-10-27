@@ -39,12 +39,12 @@ mv ./spark* ~/spark
 #ElasticSearch
 mkdir elasticsearch
 wget -O - https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.4.4.tar.gz | tar zx -C ~/elasticsearch --strip-components=1
-mv ./elasticsearch ~/PredictionIO/vendors/elasticsearch
+mv ~/elasticsearch ~/PredictionIO/vendors/elasticsearch
 
 #HBase
 mkdir hbase
 wget -O - http://archive.apache.org/dist/hbase/hbase-1.0.0/hbase-1.0.0-bin.tar.gz | tar zx -C ~/hbase --strip-components=1
-mv ./hbase ~/PredictionIO/vendors/hbase
+mv ~/hbase ~/PredictionIO/vendors/hbase
 echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/PredictionIO/vendors/hbase/conf/hbase-env.sh 
 
 #Python SDK
@@ -82,4 +82,6 @@ pio status
 
 #Get Recommendation Engine
 mkdir -p ~/PEngine/Recommendation
+pio template get PredictionIO/template-scala-parallel-universal-recommendation ~/PEngine/Recommendation
+
 
