@@ -81,5 +81,5 @@ cp hbase-env.sh ~/PredictionIO/vendors/hbase/conf/
 pio status
 
 #Get Recommendation Engine
-mkdir ~/PEngine/Recommendation
+mkdir -p ~/PEngine/Recommendation
 
