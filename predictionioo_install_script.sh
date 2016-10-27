@@ -5,7 +5,7 @@ export LANG=en_US.UTF-8
 export TERM=xterm
 
 locale-gen en_US en_US.UTF-8
-echo "export PS1='\e[1;31m\]\u@\h:\w\\$\[\e[0m\] '" >> /home/server1001/.bashrc
+echo "export PS1='\e[1;31m\]\u@\h:\w\\$\[\e[0m\] '" >> ~/.bashrc
 sudo apt-get update
 
 # Runit
