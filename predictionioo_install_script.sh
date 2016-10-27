@@ -35,18 +35,19 @@ export PATH=$PATH:$PIO_HOME/bin
 echo 'PATH=$PATH:$PIO_HOME/bin' >> ~/.bashrc
 
 #Spark
-wget -O - http://d3kbcqa49mib13.cloudfront.net/spark-1.5.1-bin-hadoop2.6.tgz | tar zx
-mv ./spark* ~/spark
+mkdir spark
+wget -O - http://d3kbcqa49mib13.cloudfront.net/spark-1.5.1-bin-hadoop2.6.tgz | tar zx -C spark --strip-components=1
+mv spark ~/spark
 
 #ElasticSearch
 mkdir elasticsearch
-wget -O - https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.4.4.tar.gz | tar zx -C ~/elasticsearch --strip-components=1
-mv ~/elasticsearch ~/PredictionIO/vendors/elasticsearch
+wget -O - https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.4.4.tar.gz | tar zx -C elasticsearch --strip-components=1
+mv elasticsearch ~/PredictionIO/vendors/elasticsearch
 
 #HBase
 mkdir hbase
-wget -O - http://archive.apache.org/dist/hbase/hbase-1.0.0/hbase-1.0.0-bin.tar.gz | tar zx -C ~/hbase --strip-components=1
-mv ~/hbase ~/PredictionIO/vendors/hbase
+wget -O - http://archive.apache.org/dist/hbase/hbase-1.0.0/hbase-1.0.0-bin.tar.gz | tar zx -C hbase --strip-components=1
+mv hbase ~/PredictionIO/vendors/hbase
 echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/PredictionIO/vendors/hbase/conf/hbase-env.sh 
 
 #Python SDK
